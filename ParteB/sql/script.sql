@@ -1,6 +1,6 @@
-CREATE DATABASE informacion_nacional2;
+CREATE DATABASE informacion_nacional;
 
-USE informacion_nacional2;
+USE informacion_nacional;
 
 CREATE TABLE pais (
     codigo_pais VARCHAR(3) PRIMARY KEY,
