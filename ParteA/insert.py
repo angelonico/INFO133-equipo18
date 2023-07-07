@@ -24,8 +24,8 @@ def limpia(lista,palabra,texto):
 # Conecta a mariaDB
 try:
     conn = mariadb.connect(
-        user="root",
-        password="...",
+        user="root", # Usuario 
+        password="352616", # Clave
         host="localhost",
         #port=3306
     )
@@ -67,7 +67,7 @@ id_medio=cur.fetchall()
 id_medio=str(id_medio[0][0])
 
 # Inserta datos en Crear, ejemplo_noticia, categoria y RRSS respectivamente
-cur.execute("INSERT INTO Crear (id_medio,rut) VALUES ("+id_medio+","+fundador[0]+")")
+cur.execute("INSERT INTO crear (id_medio,rut) VALUES ("+id_medio+","+fundador[0]+")")
 cur.execute("INSERT INTO ejemplo_noticia (url,xpath_titulo,xpath_fecha,xpath_contenido,id_medio) VALUES ("+ejemplo_noticia[0]+","+ejemplo_noticia[1]+","+ejemplo_noticia[2]+","+ejemplo_noticia[3]+","+id_medio+")")
 cur.execute("INSERT INTO categoria (id_categoria,nombre_categoria,url_categoria,url_ejemplo,xpath,id_medio) VALUES (NULL,"+categoria[0]+","+categoria[1]+","+categoria[2]+","+categoria[3]+","+id_medio+")")
 cur.execute("INSERT INTO RRSS (nombre_RRSS,nombre_cuenta,seguidores,ultima_act,id_medio) VALUES ("+rrss[0]+","+rrss[1]+","+rrss[2]+","+rrss[3]+","+id_medio+")")
