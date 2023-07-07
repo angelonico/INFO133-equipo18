@@ -1,5 +1,5 @@
 # INFO133-equipo18
-The best data base of the YEAR
+Data base de medios de prensa de Costa Rica
 
 Integrantes:
 Bastian Alvarez
