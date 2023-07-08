@@ -7,6 +7,7 @@ Integrantes:
     <li>Bastian Alvarez</li>
     <li>Angelo Barrientos</li>
     <li>Juan Santana</li>
+</ul>
 
 # Importar
 La base de datos debe ser importada desde script.sql
