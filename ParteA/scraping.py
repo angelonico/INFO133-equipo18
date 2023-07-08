@@ -60,7 +60,6 @@ URL=input("Escriba la URL de una noticia del medio: ")
 # Obtiene id del medio
 cur.execute("SELECT id_medio FROM medio_prensa WHERE nombre='"+name+"'")
 id_medio=cur.fetchall()
-print(id_medio[0][0])
 
 # Obtiene los XPATH
 cur.execute("SELECT xpath_titulo,xpath_fecha FROM ejemplo_noticia WHERE id_medio="+str(id_medio[0][0]))
