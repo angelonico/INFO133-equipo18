@@ -2,9 +2,11 @@
 Base de datos de medios de prensa de Costa Rica
 
 Integrantes:
-Bastian Alvarez
-Angelo Barrientos
-Juan Santana
+
+<ul>
+    <li>Bastian Alvarez</li>
+    <li>Angelo Barrientos</li>
+    <li>Juan Santana</li>
 
 # Importar
 La base de datos debe ser importada desde script.sql
