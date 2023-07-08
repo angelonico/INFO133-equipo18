@@ -2,6 +2,7 @@ import mysql.connector as mariadb
 import sys
 from requests_html import HTMLSession
 import random
+import requests
 
 def format_date(date):
         return(date.split("T")[0])
@@ -62,18 +63,21 @@ cur.execute("SELECT id_medio FROM medio_prensa WHERE nombre='"+name+"'")
 id_medio=cur.fetchall()
 
 # Obtiene los XPATH
-cur.execute("SELECT xpath_titulo,xpath_fecha FROM ejemplo_noticia WHERE id_medio="+str(id_medio[0][0]))
-XPATHS=cur.fetchall()
+try:
+    cur.execute("SELECT xpath_titulo,xpath_fecha FROM ejemplo_noticia WHERE id_medio="+str(id_medio[0][0]))
+    XPATHS=cur.fetchall()
+except IndexError:
+    print("El medio no existe")
+    sys.exit(0)
 
 response = session.get(URL,headers=headers)
 
 title = response.html.xpath(XPATHS[0][0])[0].text
 print(title)
-
 date = response.html.xpath(XPATHS[0][1])[0]
 print(date)
-
 print(format_date(date))
+
 
 conn.commit() # Guarda cambios
 

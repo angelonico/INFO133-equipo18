@@ -66,20 +66,31 @@ INSERT INTO ubicacion (id_ubicacion,continente,pais,region,ciudad) VALUES
 (2, 'America', 'Costa Rica', 'Chorotega', 'Nicoya');
 
 INSERT INTO fundador (rut,nombre_fundador) VALUES
-(11234567,'Marco Tulio Soto Castro');
+(841438471,'Marco Tulio Soto Castro'),
+(310987654, 'Sergio González Soto'),
+(543210987, 'Alejandro Martínez Herrera'),
+(265432109, 'Carolina Morales Chaves'),
+(487654321, 'Isabel Ramírez Cruz'),
+(198765432, 'Mario Fernández Solís'),
+(689012345, 'Valeria Sánchez Rojas');
 
 INSERT INTO medio_prensa (id_medio,nombre,sitio_web,cobertura,anio_fundacion,id_ubicacion) VALUES
 (1, 'La Teja','https://www.lateja.cr/','Nacional','1991-06-06',1),
 (2, 'The Couch', 'https://thecouch.world', 'Internacional','2015-01-01',1),
 (3, 'The Tico Times', 'https://ticotimes.net', 'Internacional', '1956-05-18', 1),
 (4, 'Primera Plana', 'https://primeraplana.or.cr/es/', 'Nacional', NULL, 1),
-(5, 'La Voz de Guanacaste', 'https://vozdeguanacaste.com', 'Internacional', NULL, 2),
-(6, 'Guanacaste a la Altura', 'https://www.guanacastealaaltura.com', 'Nacional', NULL, 2),
+(5, 'La Voz de Guanacaste', 'https://vozdeguanacaste.com', 'Internacional', '2002-03-14', 2),
+(6, 'Guanacaste a la Altura', 'https://www.guanacastealaaltura.com', 'Nacional', '1998-07-09', 2),
 (7, 'Guana Noticias', 'https://guananoticias.com', 'Nacional', '2017-12-05', 2);
 
 INSERT INTO crear (id_medio,rut) VALUES
-(1,11234567);
-
+(1, 841438471),
+(2, 310987654),
+(3, 543210987),
+(4, 265432109),
+(5, 487654321),
+(6, 198765432),
+(7, 689012345);
 
 INSERT INTO ejemplo_noticia (url,xpath_titulo,xpath_fecha,xpath_contenido,id_medio) VALUES
 ('https://www.lateja.cr/sucesos/gatillero-se-mete-a-bar-y-asesina-de-varios/OZQ7RHS3F5CMLCM34NAHKPOL64/story/','//div//h1',"//time[@class='primary-font__PrimaryFontStyles-o56yd5-0 idKzkX date undefined']//@datetime",'/html/body/div[1]/section/div/div[2]/div/article/p',1),
