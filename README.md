@@ -1,5 +1,5 @@
 # INFO133-equipo18
-Data base de medios de prensa de Costa Rica
+Base de datps de medios de prensa de Costa Rica
 
 Integrantes:
 Bastian Alvarez
